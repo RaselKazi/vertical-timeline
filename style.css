@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+img,
+svg {
+  vertical-align: middle;
+}
+body {
+  font-family: "Montserrat", "Hind Siliguri", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.milestones-map {
+  display: grid;
+  max-height: 600px;
+  background-position-x: center;
+  background-image: url("img/milestones.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  justify-items: center;
+  margin: 100px auto;
+  grid-template-areas: "a a b c d" "i h g f e" "j . . . .";
+}
+
+.milestones-map .milestone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 100px 0;
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+}
+.milestones-map .milestone:first-child:before {
+  content: "";
+  background-image: url("img/arrow.svg");
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: -60px;
+  z-index: -1;
+}
+.milestones-map .milestone:nth-child(odd) {
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  margin-top: 0;
+}
+.milestones-map .milestone:nth-child(2n) {
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.milestones-map .milestone .semester-pointer {
+  height: 27px;
+  width: 27px;
+  font-size: 14px;
+}
+.milestones-map .milestone .semester-pointer {
+  height: 47px;
+  width: 47px;
+  border-radius: 50%;
+  font-size: 28px;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.milestones-map .milestone .semester-pointer img {
+  position: absolute;
+  top: -120%;
+  left: 45%;
+}
+.milestones-map .milestone .semester-pointer.semester-1 {
+  background-color: #5b72ee;
+}
+.milestones-map .milestone .semester-pointer.semester-2 {
+  background-color: #fd8005;
+}
+.milestones-map .milestone .semester-pointer.semester-3 {
+  background-color: #8951a3;
+}
+.milestones-map .milestone .semester-pointer.semester-4 {
+  background-color: #e34856;
+}
+.milestones-map .milestone p {
+  box-shadow: 0 4px 18px 0 rgba(79, 133, 237, 0.15);
+  font-size: 12px;
+  padding: 10px;
+  border-radius: 6px;
+  margin: 10px 0;
+  background-color: #fff;
+  font-weight: 500;
+  text-align: center;
+}
+.milestones-map .milestone p .main-timeline {
+  padding: 20px 0;
+  position: relative;
+}
+.milestones-map .milestone:first-child {
+  top: -75px;
+  left: -50px;
+}
+.milestones-map .milestone:nth-child(2) {
+  left: -50px;
+  top: -115px;
+}
+.milestones-map .milestone:nth-child(3) {
+  top: -75px;
+}
+
+.milestones-map .milestone:nth-child(4) {
+  top: -5px;
+  left: 70px;
+}
+
+.milestones-map .milestone:nth-child(5) {
+  top: -65px;
+  left: 50px;
+}
+.milestones-map .milestone:nth-child(6) {
+  top: -42px;
+}
+.milestones-map .milestone:nth-child(7) {
+  left: 5px;
+}
+.milestones-map .milestone:nth-child(8) {
+  top: -40px;
+}
+.milestones-map .milestone:nth-child(9) {
+  top: 40px;
+  left: 10px;
+}
+.milestones-map .milestone:nth-child(10) {
+  top: -110px;
+  left: -40px;
+}
+@media screen and (max-width: 1200px) {
+  .course-content-component .milestones-map {
+    max-width: 790px;
+    max-height: 900px;
+    padding-top: 0;
+    margin: 100px auto 0;
+    background-image: url("img/mid-milestones-map");
+    grid-template-areas: "a b c d" "g f e d" "h i j .";
+  }
+
+  .milestones-map .milestone .semester-pointer {
+    height: 32px;
+    width: 32px;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 880px) {
+}
+@media screen and (max-width: 767px) {
+  .milestones-map {
+    max-width: 560px;
+    margin-top: 140px;
+    margin-bottom: 180px;
+    max-height: 900px;
+    background-image: url("img/milestones-map.png");
+    background-position-x: center;
+    grid-template-areas: "a b" "c d" "e f" "g h" "i j";
+  }
+
+  .milestones-map .milestone:first-child {
+    top: -75px;
+    left: 0px;
+  }
+  .milestones-map .milestone:nth-child(2) {
+    left: 0px;
+    top: -80px;
+  }
+  .milestones-map .milestone:nth-child(3) {
+    top: -90px;
+  }
+
+  .milestones-map .milestone:nth-child(4) {
+    top: -120px;
+    left: 70px;
+  }
+
+  .milestones-map .milestone:nth-child(5) {
+    top: -180px;
+    left: 50px;
+  }
+  .milestones-map .milestone:nth-child(6) {
+    top: -110px;
+  }
+  .milestones-map .milestone:nth-child(7) {
+    top: -70%;
+  }
+  .milestones-map .milestone:nth-child(8) {
+    top: -60%;
+  }
+  .milestones-map .milestone:nth-child(9) {
+    top: -110%;
+    left: 10px;
+  }
+  .milestones-map .milestone:nth-child(10) {
+    top: -110%;
+    left: 80px;
+  }
+}
+@media screen and (max-width: 610px) {
+  .milestones-map {
+    max-width: 350px;
+    max-height: 1000px;
+  }
+}
+
+@media screen and (max-width: 579px) {
+  .milestones-map .milestone:first-child {
+    top: -95px;
+    left: 0px;
+  }
+
+  .milestones-map .milestone:nth-child(3) {
+    top: -140px;
+  }
+
+  .milestones-map .milestone:nth-child(4) {
+    top: -120px;
+    left: 60px;
+  }
+
+  .milestones-map .milestone:nth-child(5) {
+    top: -180px;
+    left: 50px;
+  }
+  .milestones-map .milestone:nth-child(6) {
+    top: -110px;
+  }
+  .milestones-map .milestone:nth-child(7) {
+    top: -70%;
+  }
+  .milestones-map .milestone:nth-child(8) {
+    top: -60%;
+  }
+}
